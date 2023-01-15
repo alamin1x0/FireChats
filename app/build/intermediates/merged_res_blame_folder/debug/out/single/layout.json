@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/activity_edit_profile.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_edit_profile.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/sender_item_layout.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/sender_item_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/fragment_messages.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/fragment_messages.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/reviver_item_layout.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/reviver_item_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/receiver_item_layout.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/receiver_item_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/fragment_home.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/fragment_notificatin.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/fragment_notificatin.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/activity_registion.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_registion.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/fragment_profile.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/activity_main.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/activity_setting.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_setting.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/user_item_layout.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/user_item_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/activity_logout.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_logout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/activity_login.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/activity_chat.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_chat.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/header_layout.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/header_layout.xml"
+    },
+    {
+        "merged": "com.developeralamin.firechat.app-mergeDebugResources-54:/layout/sender_item_layout.xml",
+        "source": "com.developeralamin.firechat.app-main-57:/layout/sender_item_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/item_user_layout.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/item_user_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/fragment_friends.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/fragment_friends.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/activity_home.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_home.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/activity_forgot.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_forgot.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-mergeDebugResources-54:/layout/activity_splash_screen.xml",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_splash_screen.xml"
+    }
+]

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">899432094063-rn9of716rachkpc23fr0et76dfrorvvr.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">899432094063</string>
+    <string name="google_api_key" translatable="false">AIzaSyCsQRMiMEQYhdk0rs5XAR52L4RMRX5LA9Q</string>
+    <string name="google_app_id" translatable="false">1:899432094063:android:efde28d82bd2f6b68af09a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCsQRMiMEQYhdk0rs5XAR52L4RMRX5LA9Q</string>
+    <string name="google_storage_bucket" translatable="false">firechat-263cb.appspot.com</string>
+    <string name="project_id" translatable="false">firechat-263cb</string>
+</resources>

@@ -1,0 +1,314 @@
+[
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xxhdpi_ic_message_foreground.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-xxhdpi/ic_message_foreground.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_fragment_home.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_baseline_send_24.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_baseline_send_24.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_fragment_messages.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/fragment_messages.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_sender_item_layout.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/sender_item_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_baseline_person_24.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_baseline_person_24.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_baseline_star_rate_24.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_baseline_star_rate_24.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_header_layout.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/header_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xxhdpi_ic_message_round.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-xxhdpi/ic_message_round.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xhdpi_ic_message_round.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-xhdpi/ic_message_round.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-anydpi-v26_ic_message.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-anydpi-v26/ic_message.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_profile.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/profile.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_profile.jpg.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/profile.jpg"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_baseline_share_24.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_baseline_share_24.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_activity_home.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_home.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_baseline_group_24.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_baseline_group_24.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_header.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/header.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xxxhdpi_ic_message.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-xxxhdpi/ic_message.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xhdpi_ic_message.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-xhdpi/ic_message.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_receiver_item_layout.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/receiver_item_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xxxhdpi_ic_message_round.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-xxxhdpi/ic_message_round.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/menu_main_menu.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/menu/main_menu.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xhdpi_ic_message_foreground.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-xhdpi/ic_message_foreground.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xxhdpi_ic_message.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-xxhdpi/ic_message.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_fragment_friends.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/fragment_friends.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_baseline_message_24.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_baseline_message_24.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_messages.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/messages.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_home.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_baseline_more_vert_24.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_baseline_more_vert_24.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-hdpi_ic_message.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-hdpi/ic_message.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_logout.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_logout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_reviver_item_layout.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/reviver_item_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-pngs-50:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.developeralamin.firechat.app-merged_res-55:/layout_sender_item_layout.xml.flat",
+        "source": "com.developeralamin.firechat.app-main-57:/layout/sender_item_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/navigation_nav_graph.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-mdpi_ic_message_round.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-mdpi/ic_message_round.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-mdpi_ic_message.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-mdpi/ic_message.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-anydpi-v26_ic_message_round.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-anydpi-v26/ic_message_round.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_baseline_notifications_24.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_baseline_notifications_24.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/xml_backup_rules.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_activity_logout.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_logout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/xml_data_extraction_rules.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_activity_forgot.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_forgot.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-hdpi_ic_message_round.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-hdpi/ic_message_round.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_baseline_power_settings_new_24.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_baseline_power_settings_new_24.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_fragment_notificatin.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/fragment_notificatin.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/menu_bottom_menu.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/menu/bottom_menu.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_activity_splash_screen.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_activity_setting.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_setting.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_baseline_arrow_back_24.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_baseline_arrow_back_24.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_shap_btn.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/shap_btn.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/menu_nav_menu.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/menu/nav_menu.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-xxxhdpi_ic_message_foreground.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-xxxhdpi/ic_message_foreground.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_activity_main.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_activity_edit_profile.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_edit_profile.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-hdpi_ic_message_foreground.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-hdpi/ic_message_foreground.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_fragment_profile.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_message.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_message.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_user_item_layout.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/user_item_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_item_user_layout.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/item_user_layout.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/drawable_ic_setting.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/drawable/ic_setting.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_activity_chat.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_chat.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_activity_login.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/mipmap-mdpi_ic_message_foreground.png.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-debug-56:/mipmap-mdpi/ic_message_foreground.png"
+    },
+    {
+        "merged": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-merged_res-55:/layout_activity_registion.xml.flat",
+        "source": "/home/alamin/.gradle/daemon/7.4/com.developeralamin.firechat.app-main-57:/layout/activity_registion.xml"
+    }
+]

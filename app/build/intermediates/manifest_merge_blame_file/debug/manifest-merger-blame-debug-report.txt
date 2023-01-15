@@ -1,0 +1,898 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.developeralamin.firechat"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:5:5-67
+11-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:7:5-79
+12-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:7:22-77
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:8:5-80
+13-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:8:22-78
+14
+15    <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
+16    <permission
+16-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:7:5-9:47
+17        android:name="com.developeralamin.firechat.permission.C2D_MESSAGE"
+17-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:8:9-63
+18        android:protectionLevel="signature" />
+18-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:9:9-44
+19
+20    <uses-permission android:name="com.developeralamin.firechat.permission.C2D_MESSAGE" /> <!-- OneSignal SDK has runtime checks Android version. -->
+20-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:11:5-79
+20-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:11:22-76
+21    <!-- <uses-sdk tools:overrideLibrary="android.support.customtabs"/> -->
+22    <!-- Required runtime permission to display notifications on Android 13 -->
+23    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- c2dm RECEIVE are basic requirements for push messages through Google's FCM -->
+23-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:16:5-77
+23-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:16:22-74
+24    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Required, makes sure notifications are delivered on time. -->
+24-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:18:5-82
+24-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:18:22-79
+25    <uses-permission android:name="android.permission.WAKE_LOCK" />
+25-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:19:5-68
+25-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:19:22-65
+26    <!--
+27 Required so the device vibrates on receiving a push notification.
+28         Vibration settings of the device still apply.
+29    -->
+30    <uses-permission android:name="android.permission.VIBRATE" />
+30-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:24:5-66
+30-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:24:22-63
+31    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+31-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:25:5-79
+31-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:25:22-76
+32    <!--
+33 Use to restore notifications the user hasn't interacted with.
+34         They could be missed notifications if the user reboots their device if this isn't in place.
+35    -->
+36    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- START: ShortcutBadger -->
+36-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:30:5-81
+36-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:30:22-78
+37    <!-- Samsung -->
+38    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+38-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:32:5-86
+38-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:32:22-83
+39    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- HTC -->
+39-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:33:5-87
+39-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:33:22-84
+40    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+40-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:34:5-81
+40-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:34:22-78
+41    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- Sony -->
+41-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:35:5-83
+41-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:35:22-80
+42    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+42-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:36:5-88
+42-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:36:22-85
+43    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- Apex -->
+43-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:37:5-92
+43-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:37:22-89
+44    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- Solid -->
+44-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:38:5-84
+44-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:38:22-81
+45    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- Huawei -->
+45-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:39:5-83
+45-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:39:22-80
+46    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+46-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:40:5-91
+46-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:40:22-88
+47    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+47-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:41:5-92
+47-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:41:22-89
+48    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- ZUK -->
+48-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:42:5-93
+48-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:42:22-90
+49    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- OPPO -->
+49-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:43:5-73
+49-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:43:22-70
+50    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+50-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:44:5-82
+50-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:44:22-79
+51    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- EvMe -->
+51-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:45:5-83
+51-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:45:22-80
+52    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+52-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:46:5-88
+52-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:46:22-85
+53    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+53-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:47:5-89
+53-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:47:22-86
+54    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+54-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:28:5-77
+54-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:28:22-74
+55
+56    <application
+56-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:10:5-96:19
+57        android:allowBackup="true"
+57-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:11:9-35
+58        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+58-->[androidx.core:core:1.8.0] /home/alamin/.gradle/caches/transforms-3/1a966dd5b57bcc56eb8dab47ca366431/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+59        android:dataExtractionRules="@xml/data_extraction_rules"
+59-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:12:9-65
+60        android:debuggable="true"
+61        android:fullBackupContent="@xml/backup_rules"
+61-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:13:9-54
+62        android:icon="@drawable/messages"
+62-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:14:9-42
+63        android:label="@string/app_name"
+63-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:15:9-41
+64        android:roundIcon="@drawable/messages"
+64-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:16:9-47
+65        android:supportsRtl="true"
+65-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:17:9-35
+66        android:testOnly="true"
+67        android:theme="@style/Theme.FireChat" >
+67-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:18:9-46
+68        <activity
+68-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:20:9-26:20
+69            android:name="com.developeralamin.firechat.ChatActivity"
+69-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:21:13-41
+70            android:exported="false" >
+70-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:22:13-37
+71            <meta-data
+71-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:23:13-25:36
+72                android:name="android.app.lib_name"
+72-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:24:17-52
+73                android:value="" />
+73-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:25:17-33
+74        </activity>
+75        <activity
+75-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:27:9-33:20
+76            android:name="com.developeralamin.firechat.EditProfileActivity"
+76-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:28:13-48
+77            android:exported="false" >
+77-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:29:13-37
+78            <meta-data
+78-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:23:13-25:36
+79                android:name="android.app.lib_name"
+79-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:24:17-52
+80                android:value="" />
+80-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:25:17-33
+81        </activity>
+82        <activity
+82-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:34:9-40:20
+83            android:name="com.developeralamin.firechat.ForgotActivity"
+83-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:35:13-43
+84            android:exported="false" >
+84-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:36:13-37
+85            <meta-data
+85-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:23:13-25:36
+86                android:name="android.app.lib_name"
+86-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:24:17-52
+87                android:value="" />
+87-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:25:17-33
+88        </activity>
+89        <activity
+89-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:41:9-47:20
+90            android:name="com.developeralamin.firechat.RegistionActivity"
+90-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:42:13-46
+91            android:exported="false" >
+91-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:43:13-37
+92            <meta-data
+92-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:23:13-25:36
+93                android:name="android.app.lib_name"
+93-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:24:17-52
+94                android:value="" />
+94-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:25:17-33
+95        </activity>
+96        <activity
+96-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:48:9-54:20
+97            android:name="com.developeralamin.firechat.LoginActivity"
+97-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:49:13-42
+98            android:exported="false" >
+98-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:50:13-37
+99            <meta-data
+99-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:23:13-25:36
+100                android:name="android.app.lib_name"
+100-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:24:17-52
+101                android:value="" />
+101-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:25:17-33
+102        </activity>
+103        <activity
+103-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:55:9-61:20
+104            android:name="com.developeralamin.firechat.MainActivity"
+104-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:56:13-41
+105            android:exported="false" >
+105-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:57:13-37
+106            <meta-data
+106-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:23:13-25:36
+107                android:name="android.app.lib_name"
+107-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:24:17-52
+108                android:value="" />
+108-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:25:17-33
+109        </activity>
+110        <activity
+110-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:62:9-68:20
+111            android:name="com.developeralamin.firechat.LogoutActivity"
+111-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:63:13-43
+112            android:exported="false" >
+112-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:64:13-37
+113            <meta-data
+113-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:23:13-25:36
+114                android:name="android.app.lib_name"
+114-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:24:17-52
+115                android:value="" />
+115-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:25:17-33
+116        </activity>
+117        <activity
+117-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:69:9-75:20
+118            android:name="com.developeralamin.firechat.SettingActivity"
+118-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:70:13-44
+119            android:exported="false" >
+119-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:71:13-37
+120            <meta-data
+120-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:23:13-25:36
+121                android:name="android.app.lib_name"
+121-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:24:17-52
+122                android:value="" />
+122-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:25:17-33
+123        </activity>
+124        <activity
+124-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:76:9-82:20
+125            android:name="com.developeralamin.firechat.HomeActivity"
+125-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:77:13-41
+126            android:exported="false" >
+126-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:78:13-37
+127            <meta-data
+127-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:23:13-25:36
+128                android:name="android.app.lib_name"
+128-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:24:17-52
+129                android:value="" />
+129-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:25:17-33
+130        </activity>
+131        <activity
+131-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:83:9-95:20
+132            android:name="com.developeralamin.firechat.SplashScreen"
+132-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:84:13-41
+133            android:exported="true" >
+133-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:85:13-36
+134            <intent-filter>
+134-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:86:13-90:29
+135                <action android:name="android.intent.action.MAIN" />
+135-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:87:17-69
+135-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:87:25-66
+136
+137                <category android:name="android.intent.category.LAUNCHER" />
+137-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:89:17-77
+137-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:89:27-74
+138            </intent-filter>
+139
+140            <meta-data
+140-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:23:13-25:36
+141                android:name="android.app.lib_name"
+141-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:24:17-52
+142                android:value="" />
+142-->/home/alamin/Kotlin/FireChat/app/src/main/AndroidManifest.xml:25:17-33
+143        </activity>
+144        <activity
+144-->[com.karumi:dexter:6.2.3] /home/alamin/.gradle/caches/transforms-3/2b22c21f8a95d982ea494809691e5481/transformed/dexter-6.2.3/AndroidManifest.xml:27:9-29:72
+145            android:name="com.karumi.dexter.DexterActivity"
+145-->[com.karumi:dexter:6.2.3] /home/alamin/.gradle/caches/transforms-3/2b22c21f8a95d982ea494809691e5481/transformed/dexter-6.2.3/AndroidManifest.xml:28:13-60
+146            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+146-->[com.karumi:dexter:6.2.3] /home/alamin/.gradle/caches/transforms-3/2b22c21f8a95d982ea494809691e5481/transformed/dexter-6.2.3/AndroidManifest.xml:29:13-69
+147
+148        <receiver
+148-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:50:9-61:20
+149            android:name="com.onesignal.FCMBroadcastReceiver"
+149-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:51:13-62
+150            android:exported="true"
+150-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:52:13-36
+151            android:permission="com.google.android.c2dm.permission.SEND" >
+151-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:53:13-73
+152
+153            <!-- High priority so OneSignal payloads can be filtered from other FCM receivers -->
+154            <intent-filter android:priority="999" >
+154-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:56:13-60:29
+154-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:56:28-50
+155                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+155-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:57:17-81
+155-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:57:25-78
+156
+157                <category android:name="com.developeralamin.firechat" />
+157-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:59:17-61
+157-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:59:27-58
+158            </intent-filter>
+159        </receiver>
+160
+161        <service
+161-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:63:9-69:19
+162            android:name="com.onesignal.HmsMessageServiceOneSignal"
+162-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:64:13-68
+163            android:exported="false" >
+163-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:65:13-37
+164            <intent-filter>
+164-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:66:13-68:29
+165                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+165-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:67:17-81
+165-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:67:25-78
+166            </intent-filter>
+167        </service>
+168
+169        <activity
+169-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:71:9-79:20
+170            android:name="com.onesignal.NotificationOpenedActivityHMS"
+170-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:72:13-71
+171            android:exported="true"
+171-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:73:13-36
+172            android:noHistory="true"
+172-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:74:13-37
+173            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+173-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:75:13-72
+174            <intent-filter>
+174-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:76:13-78:29
+175                <action android:name="android.intent.action.VIEW" />
+175-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:77:17-69
+175-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:77:25-66
+176            </intent-filter>
+177        </activity>
+178
+179        <service
+179-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:81:9-83:40
+180            android:name="com.onesignal.FCMIntentService"
+180-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:82:13-58
+181            android:exported="false" />
+181-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:83:13-37
+182        <service
+182-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:84:9-87:72
+183            android:name="com.onesignal.FCMIntentJobService"
+183-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:85:13-61
+184            android:exported="false"
+184-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:86:13-37
+185            android:permission="android.permission.BIND_JOB_SERVICE" />
+185-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:87:13-69
+186        <service
+186-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:88:9-91:43
+187            android:name="com.onesignal.SyncService"
+187-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:89:13-53
+188            android:exported="false"
+188-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:90:13-37
+189            android:stopWithTask="true" />
+189-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:91:13-40
+190        <service
+190-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:92:9-95:72
+191            android:name="com.onesignal.SyncJobService"
+191-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:93:13-56
+192            android:exported="false"
+192-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:94:13-37
+193            android:permission="android.permission.BIND_JOB_SERVICE" />
+193-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:95:13-69
+194
+195        <activity
+195-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:97:9-100:75
+196            android:name="com.onesignal.PermissionsActivity"
+196-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:98:13-61
+197            android:exported="false"
+197-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:99:13-37
+198            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+198-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:100:13-72
+199
+200        <receiver
+200-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:102:9-104:39
+201            android:name="com.onesignal.NotificationDismissReceiver"
+201-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:103:13-69
+202            android:exported="true" />
+202-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:104:13-36
+203        <receiver
+203-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:105:9-112:20
+204            android:name="com.onesignal.BootUpReceiver"
+204-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:106:13-56
+205            android:exported="true" >
+205-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:107:13-36
+206            <intent-filter>
+206-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:108:13-111:29
+207                <action android:name="android.intent.action.BOOT_COMPLETED" />
+207-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:109:17-79
+207-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:109:25-76
+208                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+208-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:110:17-82
+208-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:110:25-79
+209            </intent-filter>
+210        </receiver>
+211        <receiver
+211-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:113:9-119:20
+212            android:name="com.onesignal.UpgradeReceiver"
+212-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:114:13-57
+213            android:exported="true" >
+213-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:115:13-36
+214            <intent-filter>
+214-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:116:13-118:29
+215                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+215-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:117:17-84
+215-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:117:25-81
+216            </intent-filter>
+217        </receiver>
+218
+219        <activity
+219-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:121:9-127:75
+220            android:name="com.onesignal.NotificationOpenedReceiver"
+220-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:122:13-68
+221            android:excludeFromRecents="true"
+221-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:123:13-46
+222            android:exported="true"
+222-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:124:13-36
+223            android:noHistory="true"
+223-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:125:13-37
+224            android:taskAffinity=""
+224-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:126:13-36
+225            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+225-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:127:13-72
+226        <activity
+226-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:128:9-133:75
+227            android:name="com.onesignal.NotificationOpenedReceiverAndroid22AndOlder"
+227-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:129:13-85
+228            android:excludeFromRecents="true"
+228-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:130:13-46
+229            android:exported="true"
+229-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:131:13-36
+230            android:noHistory="true"
+230-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:132:13-37
+231            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+231-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:133:13-72
+232        <activity
+232-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:27:9-44:20
+233            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+233-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:28:13-80
+234            android:excludeFromRecents="true"
+234-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:29:13-46
+235            android:exported="true"
+235-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:30:13-36
+236            android:launchMode="singleTask"
+236-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:31:13-44
+237            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+237-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:32:13-72
+238            <intent-filter>
+238-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:33:13-43:29
+239                <action android:name="android.intent.action.VIEW" />
+239-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:77:17-69
+239-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:77:25-66
+240
+241                <category android:name="android.intent.category.DEFAULT" />
+241-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:36:17-76
+241-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:36:27-73
+242                <category android:name="android.intent.category.BROWSABLE" />
+242-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:37:17-78
+242-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:37:27-75
+243
+244                <data
+244-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:39:17-42:51
+245                    android:host="firebase.auth"
+245-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:40:21-49
+246                    android:path="/"
+246-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:41:21-37
+247                    android:scheme="genericidp" />
+247-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:42:21-48
+248            </intent-filter>
+249        </activity>
+250        <activity
+250-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:45:9-62:20
+251            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+251-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:46:13-79
+252            android:excludeFromRecents="true"
+252-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:47:13-46
+253            android:exported="true"
+253-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:48:13-36
+254            android:launchMode="singleTask"
+254-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:49:13-44
+255            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+255-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:50:13-72
+256            <intent-filter>
+256-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:51:13-61:29
+257                <action android:name="android.intent.action.VIEW" />
+257-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:77:17-69
+257-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:77:25-66
+258
+259                <category android:name="android.intent.category.DEFAULT" />
+259-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:36:17-76
+259-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:36:27-73
+260                <category android:name="android.intent.category.BROWSABLE" />
+260-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:37:17-78
+260-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:37:27-75
+261
+262                <data
+262-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:39:17-42:51
+263                    android:host="firebase.auth"
+263-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:40:21-49
+264                    android:path="/"
+264-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:41:21-37
+265                    android:scheme="recaptcha" />
+265-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:42:21-48
+266            </intent-filter>
+267        </activity>
+268
+269        <service
+269-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:64:9-70:19
+270            android:name="com.google.firebase.components.ComponentDiscoveryService"
+270-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:65:13-84
+271            android:directBootAware="true"
+271-->[com.google.firebase:firebase-common:20.1.0] /home/alamin/.gradle/caches/transforms-3/74a75a9faf612773f18b41dab32d5edf/transformed/firebase-common-20.1.0/AndroidManifest.xml:35:13-43
+272            android:exported="false" >
+272-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:66:13-37
+273            <meta-data
+273-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:67:13-69:85
+274                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+274-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:68:17-109
+275                android:value="com.google.firebase.components.ComponentRegistrar" />
+275-->[com.google.firebase:firebase-auth:21.0.2] /home/alamin/.gradle/caches/transforms-3/a796ed3863be164b510d0a3aee0fc587/transformed/firebase-auth-21.0.2/AndroidManifest.xml:69:17-82
+276            <meta-data
+276-->[com.google.firebase:firebase-database:20.0.4] /home/alamin/.gradle/caches/transforms-3/a7a3fa5f300b3d0163477ce09fcee15a/transformed/firebase-database-20.0.4/AndroidManifest.xml:32:13-34:85
+277                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+277-->[com.google.firebase:firebase-database:20.0.4] /home/alamin/.gradle/caches/transforms-3/a7a3fa5f300b3d0163477ce09fcee15a/transformed/firebase-database-20.0.4/AndroidManifest.xml:33:17-109
+278                android:value="com.google.firebase.components.ComponentRegistrar" />
+278-->[com.google.firebase:firebase-database:20.0.4] /home/alamin/.gradle/caches/transforms-3/a7a3fa5f300b3d0163477ce09fcee15a/transformed/firebase-database-20.0.4/AndroidManifest.xml:34:17-82
+279            <meta-data
+279-->[com.google.firebase:firebase-storage:20.0.1] /home/alamin/.gradle/caches/transforms-3/93f2ba3117877e75d0f010601abf085f/transformed/firebase-storage-20.0.1/AndroidManifest.xml:33:13-35:85
+280                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+280-->[com.google.firebase:firebase-storage:20.0.1] /home/alamin/.gradle/caches/transforms-3/93f2ba3117877e75d0f010601abf085f/transformed/firebase-storage-20.0.1/AndroidManifest.xml:34:17-107
+281                android:value="com.google.firebase.components.ComponentRegistrar" />
+281-->[com.google.firebase:firebase-storage:20.0.1] /home/alamin/.gradle/caches/transforms-3/93f2ba3117877e75d0f010601abf085f/transformed/firebase-storage-20.0.1/AndroidManifest.xml:35:17-82
+282            <meta-data
+282-->[com.google.firebase:firebase-messaging:20.1.4] /home/alamin/.gradle/caches/transforms-3/1b9120fc1586fbb1d0d1c2c0a2ffc139/transformed/firebase-messaging-20.1.4/AndroidManifest.xml:38:13-40:85
+283                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+283-->[com.google.firebase:firebase-messaging:20.1.4] /home/alamin/.gradle/caches/transforms-3/1b9120fc1586fbb1d0d1c2c0a2ffc139/transformed/firebase-messaging-20.1.4/AndroidManifest.xml:39:17-119
+284                android:value="com.google.firebase.components.ComponentRegistrar" />
+284-->[com.google.firebase:firebase-messaging:20.1.4] /home/alamin/.gradle/caches/transforms-3/1b9120fc1586fbb1d0d1c2c0a2ffc139/transformed/firebase-messaging-20.1.4/AndroidManifest.xml:40:17-82
+285            <meta-data
+285-->[com.google.firebase:firebase-datatransport:17.0.3] /home/alamin/.gradle/caches/transforms-3/09b4c28e18052a27fa6b61b1a0ff6b23/transformed/firebase-datatransport-17.0.3/AndroidManifest.xml:28:13-30:85
+286                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+286-->[com.google.firebase:firebase-datatransport:17.0.3] /home/alamin/.gradle/caches/transforms-3/09b4c28e18052a27fa6b61b1a0ff6b23/transformed/firebase-datatransport-17.0.3/AndroidManifest.xml:29:17-115
+287                android:value="com.google.firebase.components.ComponentRegistrar" />
+287-->[com.google.firebase:firebase-datatransport:17.0.3] /home/alamin/.gradle/caches/transforms-3/09b4c28e18052a27fa6b61b1a0ff6b23/transformed/firebase-datatransport-17.0.3/AndroidManifest.xml:30:17-82
+288            <meta-data
+288-->[com.google.firebase:firebase-iid:20.1.4] /home/alamin/.gradle/caches/transforms-3/f074c1f20e214e7254bc0d29ef2854d9/transformed/firebase-iid-20.1.4/AndroidManifest.xml:32:13-34:85
+289                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+289-->[com.google.firebase:firebase-iid:20.1.4] /home/alamin/.gradle/caches/transforms-3/f074c1f20e214e7254bc0d29ef2854d9/transformed/firebase-iid-20.1.4/AndroidManifest.xml:33:17-96
+290                android:value="com.google.firebase.components.ComponentRegistrar" />
+290-->[com.google.firebase:firebase-iid:20.1.4] /home/alamin/.gradle/caches/transforms-3/f074c1f20e214e7254bc0d29ef2854d9/transformed/firebase-iid-20.1.4/AndroidManifest.xml:34:17-82
+291            <meta-data
+291-->[com.google.firebase:firebase-installations:16.2.0] /home/alamin/.gradle/caches/transforms-3/fc367e8960bf77524cdc96930db2667f/transformed/firebase-installations-16.2.0/AndroidManifest.xml:17:13-19:85
+292                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+292-->[com.google.firebase:firebase-installations:16.2.0] /home/alamin/.gradle/caches/transforms-3/fc367e8960bf77524cdc96930db2667f/transformed/firebase-installations-16.2.0/AndroidManifest.xml:18:17-127
+293                android:value="com.google.firebase.components.ComponentRegistrar" />
+293-->[com.google.firebase:firebase-installations:16.2.0] /home/alamin/.gradle/caches/transforms-3/fc367e8960bf77524cdc96930db2667f/transformed/firebase-installations-16.2.0/AndroidManifest.xml:19:17-82
+294        </service>
+295        <!--
+296             FirebaseMessagingService performs security checks at runtime,
+297             but set to not exported to explicitly avoid allowing another app to call it.
+298        -->
+299        <service
+299-->[com.google.firebase:firebase-messaging:20.1.4] /home/alamin/.gradle/caches/transforms-3/1b9120fc1586fbb1d0d1c2c0a2ffc139/transformed/firebase-messaging-20.1.4/AndroidManifest.xml:28:9-34:19
+300            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+300-->[com.google.firebase:firebase-messaging:20.1.4] /home/alamin/.gradle/caches/transforms-3/1b9120fc1586fbb1d0d1c2c0a2ffc139/transformed/firebase-messaging-20.1.4/AndroidManifest.xml:29:13-82
+301            android:exported="false" >
+301-->[com.google.firebase:firebase-messaging:20.1.4] /home/alamin/.gradle/caches/transforms-3/1b9120fc1586fbb1d0d1c2c0a2ffc139/transformed/firebase-messaging-20.1.4/AndroidManifest.xml:30:13-37
+302            <intent-filter android:priority="-500" >
+302-->[com.google.firebase:firebase-messaging:20.1.4] /home/alamin/.gradle/caches/transforms-3/1b9120fc1586fbb1d0d1c2c0a2ffc139/transformed/firebase-messaging-20.1.4/AndroidManifest.xml:31:13-33:29
+302-->[com.google.firebase:firebase-messaging:20.1.4] /home/alamin/.gradle/caches/transforms-3/1b9120fc1586fbb1d0d1c2c0a2ffc139/transformed/firebase-messaging-20.1.4/AndroidManifest.xml:31:28-51
+303                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+303-->[com.google.firebase:firebase-messaging:20.1.4] /home/alamin/.gradle/caches/transforms-3/1b9120fc1586fbb1d0d1c2c0a2ffc139/transformed/firebase-messaging-20.1.4/AndroidManifest.xml:32:17-78
+303-->[com.google.firebase:firebase-messaging:20.1.4] /home/alamin/.gradle/caches/transforms-3/1b9120fc1586fbb1d0d1c2c0a2ffc139/transformed/firebase-messaging-20.1.4/AndroidManifest.xml:32:25-75
+304            </intent-filter>
+305        </service>
+306
+307        <receiver
+307-->[com.google.firebase:firebase-iid:20.1.4] /home/alamin/.gradle/caches/transforms-3/f074c1f20e214e7254bc0d29ef2854d9/transformed/firebase-iid-20.1.4/AndroidManifest.xml:37:9-44:20
+308            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+308-->[com.google.firebase:firebase-iid:20.1.4] /home/alamin/.gradle/caches/transforms-3/f074c1f20e214e7254bc0d29ef2854d9/transformed/firebase-iid-20.1.4/AndroidManifest.xml:38:13-78
+309            android:exported="true"
+309-->[com.google.firebase:firebase-iid:20.1.4] /home/alamin/.gradle/caches/transforms-3/f074c1f20e214e7254bc0d29ef2854d9/transformed/firebase-iid-20.1.4/AndroidManifest.xml:39:13-36
+310            android:permission="com.google.android.c2dm.permission.SEND" >
+310-->[com.google.firebase:firebase-iid:20.1.4] /home/alamin/.gradle/caches/transforms-3/f074c1f20e214e7254bc0d29ef2854d9/transformed/firebase-iid-20.1.4/AndroidManifest.xml:40:13-73
+311            <intent-filter>
+311-->[com.google.firebase:firebase-iid:20.1.4] /home/alamin/.gradle/caches/transforms-3/f074c1f20e214e7254bc0d29ef2854d9/transformed/firebase-iid-20.1.4/AndroidManifest.xml:41:13-43:29
+312                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+312-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:57:17-81
+312-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:57:25-78
+313            </intent-filter>
+314        </receiver>
+315
+316        <provider
+316-->[com.google.firebase:firebase-common:20.1.0] /home/alamin/.gradle/caches/transforms-3/74a75a9faf612773f18b41dab32d5edf/transformed/firebase-common-20.1.0/AndroidManifest.xml:26:9-31:39
+317            android:name="com.google.firebase.provider.FirebaseInitProvider"
+317-->[com.google.firebase:firebase-common:20.1.0] /home/alamin/.gradle/caches/transforms-3/74a75a9faf612773f18b41dab32d5edf/transformed/firebase-common-20.1.0/AndroidManifest.xml:27:13-77
+318            android:authorities="com.developeralamin.firechat.firebaseinitprovider"
+318-->[com.google.firebase:firebase-common:20.1.0] /home/alamin/.gradle/caches/transforms-3/74a75a9faf612773f18b41dab32d5edf/transformed/firebase-common-20.1.0/AndroidManifest.xml:28:13-72
+319            android:directBootAware="true"
+319-->[com.google.firebase:firebase-common:20.1.0] /home/alamin/.gradle/caches/transforms-3/74a75a9faf612773f18b41dab32d5edf/transformed/firebase-common-20.1.0/AndroidManifest.xml:29:13-43
+320            android:exported="false"
+320-->[com.google.firebase:firebase-common:20.1.0] /home/alamin/.gradle/caches/transforms-3/74a75a9faf612773f18b41dab32d5edf/transformed/firebase-common-20.1.0/AndroidManifest.xml:30:13-37
+321            android:initOrder="100" />
+321-->[com.google.firebase:firebase-common:20.1.0] /home/alamin/.gradle/caches/transforms-3/74a75a9faf612773f18b41dab32d5edf/transformed/firebase-common-20.1.0/AndroidManifest.xml:31:13-36
+322
+323        <activity
+323-->[com.google.android.gms:play-services-base:18.0.1] /home/alamin/.gradle/caches/transforms-3/5066f16e89a7986e1ae0e5bd320b31a6/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+324            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+324-->[com.google.android.gms:play-services-base:18.0.1] /home/alamin/.gradle/caches/transforms-3/5066f16e89a7986e1ae0e5bd320b31a6/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+325            android:exported="false"
+325-->[com.google.android.gms:play-services-base:18.0.1] /home/alamin/.gradle/caches/transforms-3/5066f16e89a7986e1ae0e5bd320b31a6/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+326            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+326-->[com.google.android.gms:play-services-base:18.0.1] /home/alamin/.gradle/caches/transforms-3/5066f16e89a7986e1ae0e5bd320b31a6/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+327
+328        <meta-data
+328-->[com.google.android.gms:play-services-basement:18.0.0] /home/alamin/.gradle/caches/transforms-3/6bddaf17196c6205ab4bdeed80d59eac/transformed/play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+329            android:name="com.google.android.gms.version"
+329-->[com.google.android.gms:play-services-basement:18.0.0] /home/alamin/.gradle/caches/transforms-3/6bddaf17196c6205ab4bdeed80d59eac/transformed/play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+330            android:value="@integer/google_play_services_version" />
+330-->[com.google.android.gms:play-services-basement:18.0.0] /home/alamin/.gradle/caches/transforms-3/6bddaf17196c6205ab4bdeed80d59eac/transformed/play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+331
+332        <provider
+332-->[androidx.emoji2:emoji2:1.2.0] /home/alamin/.gradle/caches/transforms-3/72bea6e2c5983323fa6e1a70180bd3a8/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+333            android:name="androidx.startup.InitializationProvider"
+333-->[androidx.emoji2:emoji2:1.2.0] /home/alamin/.gradle/caches/transforms-3/72bea6e2c5983323fa6e1a70180bd3a8/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+334            android:authorities="com.developeralamin.firechat.androidx-startup"
+334-->[androidx.emoji2:emoji2:1.2.0] /home/alamin/.gradle/caches/transforms-3/72bea6e2c5983323fa6e1a70180bd3a8/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+335            android:exported="false" >
+335-->[androidx.emoji2:emoji2:1.2.0] /home/alamin/.gradle/caches/transforms-3/72bea6e2c5983323fa6e1a70180bd3a8/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+336            <meta-data
+336-->[androidx.emoji2:emoji2:1.2.0] /home/alamin/.gradle/caches/transforms-3/72bea6e2c5983323fa6e1a70180bd3a8/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+337                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+337-->[androidx.emoji2:emoji2:1.2.0] /home/alamin/.gradle/caches/transforms-3/72bea6e2c5983323fa6e1a70180bd3a8/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+338                android:value="androidx.startup" />
+338-->[androidx.emoji2:emoji2:1.2.0] /home/alamin/.gradle/caches/transforms-3/72bea6e2c5983323fa6e1a70180bd3a8/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+339            <meta-data
+339-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:36:13-38:52
+340                android:name="androidx.work.WorkManagerInitializer"
+340-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:37:17-68
+341                android:value="androidx.startup" />
+341-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:38:17-49
+342            <meta-data
+342-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/alamin/.gradle/caches/transforms-3/cfb18e5f2e9a2ff1960c995c3c52f2d1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+343                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+343-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/alamin/.gradle/caches/transforms-3/cfb18e5f2e9a2ff1960c995c3c52f2d1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+344                android:value="androidx.startup" />
+344-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/alamin/.gradle/caches/transforms-3/cfb18e5f2e9a2ff1960c995c3c52f2d1/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+345        </provider>
+346
+347        <service
+347-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:41:9-46:35
+348            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+348-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:42:13-88
+349            android:directBootAware="false"
+349-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:43:13-44
+350            android:enabled="@bool/enable_system_alarm_service_default"
+350-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:44:13-72
+351            android:exported="false" />
+351-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:45:13-37
+352        <service
+352-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:47:9-53:35
+353            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+353-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:48:13-84
+354            android:directBootAware="false"
+354-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:49:13-44
+355            android:enabled="@bool/enable_system_job_service_default"
+355-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:50:13-70
+356            android:exported="true"
+356-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:51:13-36
+357            android:permission="android.permission.BIND_JOB_SERVICE" />
+357-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:52:13-69
+358        <service
+358-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:54:9-59:35
+359            android:name="androidx.work.impl.foreground.SystemForegroundService"
+359-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:55:13-81
+360            android:directBootAware="false"
+360-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:56:13-44
+361            android:enabled="@bool/enable_system_foreground_service_default"
+361-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:57:13-77
+362            android:exported="false" />
+362-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:58:13-37
+363
+364        <receiver
+364-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:61:9-66:35
+365            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+365-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:62:13-88
+366            android:directBootAware="false"
+366-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:63:13-44
+367            android:enabled="true"
+367-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:64:13-35
+368            android:exported="false" />
+368-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:65:13-37
+369        <receiver
+369-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:67:9-77:20
+370            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+370-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:68:13-106
+371            android:directBootAware="false"
+371-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:69:13-44
+372            android:enabled="false"
+372-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:70:13-36
+373            android:exported="false" >
+373-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:71:13-37
+374            <intent-filter>
+374-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:73:13-76:29
+375                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+375-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:17-87
+375-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:25-84
+376                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+376-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:17-90
+376-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:25-87
+377            </intent-filter>
+378        </receiver>
+379        <receiver
+379-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:78:9-88:20
+380            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+380-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:79:13-104
+381            android:directBootAware="false"
+381-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:80:13-44
+382            android:enabled="false"
+382-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:81:13-36
+383            android:exported="false" >
+383-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:82:13-37
+384            <intent-filter>
+384-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:84:13-87:29
+385                <action android:name="android.intent.action.BATTERY_OKAY" />
+385-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:17-77
+385-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:25-74
+386                <action android:name="android.intent.action.BATTERY_LOW" />
+386-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:17-76
+386-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:25-73
+387            </intent-filter>
+388        </receiver>
+389        <receiver
+389-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:89:9-99:20
+390            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+390-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:90:13-104
+391            android:directBootAware="false"
+391-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:91:13-44
+392            android:enabled="false"
+392-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:92:13-36
+393            android:exported="false" >
+393-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:93:13-37
+394            <intent-filter>
+394-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:95:13-98:29
+395                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+395-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:17-83
+395-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:25-80
+396                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+396-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:17-82
+396-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:25-79
+397            </intent-filter>
+398        </receiver>
+399        <receiver
+399-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:100:9-109:20
+400            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+400-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:101:13-103
+401            android:directBootAware="false"
+401-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:102:13-44
+402            android:enabled="false"
+402-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:103:13-36
+403            android:exported="false" >
+403-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:104:13-37
+404            <intent-filter>
+404-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:106:13-108:29
+405                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+405-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:17-79
+405-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:25-76
+406            </intent-filter>
+407        </receiver>
+408        <receiver
+408-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:110:9-121:20
+409            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+409-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:111:13-88
+410            android:directBootAware="false"
+410-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:112:13-44
+411            android:enabled="false"
+411-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:113:13-36
+412            android:exported="false" >
+412-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:114:13-37
+413            <intent-filter>
+413-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:116:13-120:29
+414                <action android:name="android.intent.action.BOOT_COMPLETED" />
+414-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:109:17-79
+414-->[com.onesignal:OneSignal:4.8.4] /home/alamin/.gradle/caches/transforms-3/895fe2f664483922b98e12bce4c2f21e/transformed/OneSignal-4.8.4/AndroidManifest.xml:109:25-76
+415                <action android:name="android.intent.action.TIME_SET" />
+415-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:17-73
+415-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:25-70
+416                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+416-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:17-81
+416-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:25-78
+417            </intent-filter>
+418        </receiver>
+419        <receiver
+419-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:122:9-131:20
+420            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+420-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:123:13-99
+421            android:directBootAware="false"
+421-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:124:13-44
+422            android:enabled="@bool/enable_system_alarm_service_default"
+422-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:125:13-72
+423            android:exported="false" >
+423-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:126:13-37
+424            <intent-filter>
+424-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:128:13-130:29
+425                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+425-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:17-98
+425-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:25-95
+426            </intent-filter>
+427        </receiver>
+428        <receiver
+428-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:132:9-142:20
+429            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+429-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:133:13-78
+430            android:directBootAware="false"
+430-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:134:13-44
+431            android:enabled="true"
+431-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:135:13-35
+432            android:exported="true"
+432-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:136:13-36
+433            android:permission="android.permission.DUMP" >
+433-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:137:13-57
+434            <intent-filter>
+434-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:139:13-141:29
+435                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+435-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:17-88
+435-->[androidx.work:work-runtime:2.7.1] /home/alamin/.gradle/caches/transforms-3/376bc7bdf36e4be5667b59b19aca3547/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:25-85
+436            </intent-filter>
+437        </receiver>
+438
+439        <uses-library
+439-->[androidx.window:window:1.0.0] /home/alamin/.gradle/caches/transforms-3/c67dc02335512e97f29ed06ef5f97904/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+440            android:name="androidx.window.extensions"
+440-->[androidx.window:window:1.0.0] /home/alamin/.gradle/caches/transforms-3/c67dc02335512e97f29ed06ef5f97904/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+441            android:required="false" />
+441-->[androidx.window:window:1.0.0] /home/alamin/.gradle/caches/transforms-3/c67dc02335512e97f29ed06ef5f97904/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+442        <uses-library
+442-->[androidx.window:window:1.0.0] /home/alamin/.gradle/caches/transforms-3/c67dc02335512e97f29ed06ef5f97904/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+443            android:name="androidx.window.sidecar"
+443-->[androidx.window:window:1.0.0] /home/alamin/.gradle/caches/transforms-3/c67dc02335512e97f29ed06ef5f97904/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+444            android:required="false" />
+444-->[androidx.window:window:1.0.0] /home/alamin/.gradle/caches/transforms-3/c67dc02335512e97f29ed06ef5f97904/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+445
+446        <service
+446-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /home/alamin/.gradle/caches/transforms-3/5a893a82cb988e8ad7a8421396e31c57/transformed/transport-backend-cct-2.2.0/AndroidManifest.xml:29:9-35:19
+447            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+447-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /home/alamin/.gradle/caches/transforms-3/5a893a82cb988e8ad7a8421396e31c57/transformed/transport-backend-cct-2.2.0/AndroidManifest.xml:30:13-103
+448            android:exported="false" >
+448-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /home/alamin/.gradle/caches/transforms-3/5a893a82cb988e8ad7a8421396e31c57/transformed/transport-backend-cct-2.2.0/AndroidManifest.xml:31:13-37
+449            <meta-data
+449-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /home/alamin/.gradle/caches/transforms-3/5a893a82cb988e8ad7a8421396e31c57/transformed/transport-backend-cct-2.2.0/AndroidManifest.xml:32:13-34:39
+450                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+450-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /home/alamin/.gradle/caches/transforms-3/5a893a82cb988e8ad7a8421396e31c57/transformed/transport-backend-cct-2.2.0/AndroidManifest.xml:33:17-94
+451                android:value="cct" />
+451-->[com.google.android.datatransport:transport-backend-cct:2.2.0] /home/alamin/.gradle/caches/transforms-3/5a893a82cb988e8ad7a8421396e31c57/transformed/transport-backend-cct-2.2.0/AndroidManifest.xml:34:17-36
+452        </service>
+453        <service
+453-->[com.google.android.datatransport:transport-runtime:2.2.0] /home/alamin/.gradle/caches/transforms-3/b6108c68cc4769f6f24bca163bb1459f/transformed/transport-runtime-2.2.0/AndroidManifest.xml:26:9-30:19
+454            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+454-->[com.google.android.datatransport:transport-runtime:2.2.0] /home/alamin/.gradle/caches/transforms-3/b6108c68cc4769f6f24bca163bb1459f/transformed/transport-runtime-2.2.0/AndroidManifest.xml:27:13-117
+455            android:exported="false"
+455-->[com.google.android.datatransport:transport-runtime:2.2.0] /home/alamin/.gradle/caches/transforms-3/b6108c68cc4769f6f24bca163bb1459f/transformed/transport-runtime-2.2.0/AndroidManifest.xml:28:13-37
+456            android:permission="android.permission.BIND_JOB_SERVICE" >
+456-->[com.google.android.datatransport:transport-runtime:2.2.0] /home/alamin/.gradle/caches/transforms-3/b6108c68cc4769f6f24bca163bb1459f/transformed/transport-runtime-2.2.0/AndroidManifest.xml:29:13-69
+457        </service>
+458
+459        <receiver
+459-->[com.google.android.datatransport:transport-runtime:2.2.0] /home/alamin/.gradle/caches/transforms-3/b6108c68cc4769f6f24bca163bb1459f/transformed/transport-runtime-2.2.0/AndroidManifest.xml:32:9-34:40
+460            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+460-->[com.google.android.datatransport:transport-runtime:2.2.0] /home/alamin/.gradle/caches/transforms-3/b6108c68cc4769f6f24bca163bb1459f/transformed/transport-runtime-2.2.0/AndroidManifest.xml:33:13-132
+461            android:exported="false" />
+461-->[com.google.android.datatransport:transport-runtime:2.2.0] /home/alamin/.gradle/caches/transforms-3/b6108c68cc4769f6f24bca163bb1459f/transformed/transport-runtime-2.2.0/AndroidManifest.xml:34:13-37
+462
+463        <service
+463-->[androidx.room:room-runtime:2.2.5] /home/alamin/.gradle/caches/transforms-3/28c62be62216af5910e485487386137e/transformed/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+464            android:name="androidx.room.MultiInstanceInvalidationService"
+464-->[androidx.room:room-runtime:2.2.5] /home/alamin/.gradle/caches/transforms-3/28c62be62216af5910e485487386137e/transformed/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+465            android:directBootAware="true"
+465-->[androidx.room:room-runtime:2.2.5] /home/alamin/.gradle/caches/transforms-3/28c62be62216af5910e485487386137e/transformed/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+466            android:exported="false" />
+466-->[androidx.room:room-runtime:2.2.5] /home/alamin/.gradle/caches/transforms-3/28c62be62216af5910e485487386137e/transformed/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+467
+468        <provider
+468-->[com.squareup.picasso:picasso:2.71828] /home/alamin/.gradle/caches/transforms-3/8bb7dd6f9fd0fd3da9607d55bf3f697d/transformed/picasso-2.71828/AndroidManifest.xml:8:9-11:40
+469            android:name="com.squareup.picasso.PicassoProvider"
+469-->[com.squareup.picasso:picasso:2.71828] /home/alamin/.gradle/caches/transforms-3/8bb7dd6f9fd0fd3da9607d55bf3f697d/transformed/picasso-2.71828/AndroidManifest.xml:9:13-64
+470            android:authorities="com.developeralamin.firechat.com.squareup.picasso"
+470-->[com.squareup.picasso:picasso:2.71828] /home/alamin/.gradle/caches/transforms-3/8bb7dd6f9fd0fd3da9607d55bf3f697d/transformed/picasso-2.71828/AndroidManifest.xml:10:13-72
+471            android:exported="false" />
+471-->[com.squareup.picasso:picasso:2.71828] /home/alamin/.gradle/caches/transforms-3/8bb7dd6f9fd0fd3da9607d55bf3f697d/transformed/picasso-2.71828/AndroidManifest.xml:11:13-37
+472    </application>
+473
+474</manifest>

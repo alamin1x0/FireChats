@@ -51,8 +51,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
 
 
         holder.textView.setText(list.get(position).getMessage());
-        holder.dateTime.setText(list.get(position).getDatetime());
-        holder.dateyears.setText(list.get(position).getYears());
 
     }
 
